@@ -1,115 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Handlee&family=Montserrat:wght@500;700&family=Rock+Salt&family=Shadows+Into+Light&family=Shantell+Sans:wght@400;500;700&display=swap');
+
+
+
+/*  llamdo de las fuentes
+font-family: 'Architects Daughter', cursive;
+font-family: 'Handlee', cursive;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Rock Salt', cursive;
+font-family: 'Shadows Into Light', cursive;
+font-family: 'Shantell Sans', cursive;
+  */
 * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
 :root{
-    --color__primario:#74d0e0;
-    --color__secundario:#f88b32;
-    --color__container-1:rgb(226, 223, 223);
+    --color__primario:#73D2CC;
+    --color__secundario:#E86B01;
+
+    --color__primario-2:#427874;
+    --coor__secundario-2:#783800;
+
+    --color__gris-1:#797773;
+    --color__gris-2:#DEDAD3;
+    --color__blanco:#ffffff;
 }
 
 body {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
+    font-family: 'Shadows Into Light', cursive ,'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   
 
-.header__menu {
-    display: grid;
-    grid-template-columns: auto auto;
+}
+.espaciado_letras{
+    letter-spacing: 0.1em;
+}
+.espaciado_letras_2{
+    letter-spacing: 0.17em;
+}
+/*------------------- header ------------------------------*/
+header{
+    width: 100%;
+    height:80px;
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
-}
-
-.header__menu>img {
-    width: 70px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid #fff;
-    border-spacing: 30px;
-}
-
-.header__menu>ul {
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-}
-
-.header__menu-items {
-    text-decoration: none;
-    margin-right: 10px;
-    color: var(--color__primario);
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 100;
     
-    padding: 10px;
-    border-radius: 10px;
+   
+    
 }
-
-.fondo__gradient {
-    width: 100%;
-    height: 300px;
-    background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.4)), url('/assets/imagenes/fondoHeader.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    background-position: left top;
-    object-fit: cover;
-
-}
-.header__whatsapp{
-    height: 200px;
+.heder-logo-texto{
+    height: inherit;
     display: flex;
-    flex-direction: column;
-    justify-content: end;
-    margin-left: 20px;
-}
-.header__whatsapp > a {
-    width: 100px;
-    text-decoration: none;
-    border: 1px solid var(--color__secundario);
-    border-radius: 20px;
-    padding: 10px;
-    background-color: var(--color__secundario);
-    color: #fff;
-    font-size: 1rem;
-    margin-top: 50px;
-    margin-bottom: 10px;
-    text-align: center;
-}
-.header__whatsapp > p {
-    color: #fff;
-    font-size: 1.5rem;
-}
-.container{
-    width: 80%;
-    background-color: var(--color__container-1);
-    margin: auto;
-    text-align: justify;
-    padding: 10px;
-    margin-top: 10px;;
-}
-
-h1{
-    color: var(--color__secundario);
-    margin-bottom: 20px;
-    text-align: center;
-}
-p{
-    line-height: 1.5;
-}
-.footer{
-    width:100%;
-    height:50px;
-    display: flex;
-    justify-content: space-evenly;
     align-items: center;
-    background-color: #f88b32;
-}
-.footer > a > i {
-    color: #fff;
-}
-.footer > p {
-    color: #fff;
+    
+    
 }
 
-/*iniciamos estilos de contacto */
+header img{
+    width:70px;
+    height: 70px;
+    border-radius: 50%;
+    margin: 10px;
+}
+.heder-logo-texto p{
+    font-size: 2em;
+    word-spacing: 0.2em;
+    color: #464545;
+}
+.header-menu-input{
+    margin-right: 20px;
+    color: #464545;
+}
+
+.check-menu{
+    display: none;
+}
+.header-menu-input span{
+    font-size: 2em;
+}
+/*==================================== secciones ====================================*/
+/*------------------- BANNER ------------------------------*/
+.seccion_1{
+    background-color: var(--color__gris-2);
+    width: 100%;
+    height: 250px;
+    margin: 0px;
+    position: relative;
+}
+
+.banner_seccion_1{
+    position: relative;
+    top: 80px;
+    background-image:linear-gradient(rgba(10, 10, 10, 0.6),rgba(10, 10, 10, 0.6)), url(../imagenes/banner_1.png);
+    width: 100%;
+    height:150px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-origin: border-box;
+    box-shadow: 0px 10px 10px var(--color__gris-1);
+    
+    
+}
+.seccion_1_wave{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    z-index: 90;
+    width: 100%;
+    height: 40px;
+}
+/*------------------- SERVICIOS ------------------------------*/
+.titulo_servicios{
+    font-size: 1.5em;
+    font-weight: 500;
+    color: var(--color__primario-2);
+}
+ .servicios{
+    background-color: var(--color__gris-2);
+    position: relative;
+    margin: 0px;
+    padding: 20px;
+    
+}
+.contenedor_seccion_servicios{
+    width: 90%;
+    margin: 0px auto;
+    background-color: var(--color__blanco);
+    text-align: center;
+   
+} 
+.servicios_1 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    
+}
+
+ .img_domicilios{
+    width: 150px;
+    height: auto;
+    grid-column: 1 /4;
+    grid-row: 1;
+    padding: 10px;
+}
+.domicilios_contenedor{
+    border-bottom-width: 80%;
+    border-right: 1px solid var(--color__gris-2);
+    border-bottom: 1px solid var(--color__gris-2);
+    padding-top: 10px;
+}
+.reservaciones{
+    width: 150px;
+    height: auto;
+    grid-column: 4/6;
+    grid-row: 1;
+    padding: 20px;
+}
+.reservaciones_contenedor{
+    border-bottom: 1px solid var(--color__gris-2);
+    padding-top: 10px;
+
+}
+.oficina{
+    width: 150px;
+    height: auto;
+    grid-column: 1/4;
+    grid-row: 2/3;
+    padding: 10px;
+    padding-top: 30px;
+}
+.oficina_contenedor{
+    border-right: 1px solid var(--color__gris-2);
+    border-bottom: 1px solid var(--color__gris-2);
+    padding-top: 10px;
+}
+.catering{
+    width: 150px;
+    height: auto;
+    grid-column: 4/6;
+    grid-row: 2;
+    padding: 20px;
+   
+}
+.catering_contenedor{
+    border-bottom: 1px solid var(--color__gris-2);
+    padding-top: 10px;
+}
+.servicios_1 {
+    text-align: center;
+
+}
+   
+ /*------------------- REDACCION COSAS MAGICAS ------------------------------*/   
+   
+.redaccion_cosas_magicas{
+    background-color:var(--color__secundario);
+    opacity: 0.8;
+    position: relative;
+   
+}
+.redaccion_contenedor{
+    width: 90%;
+    text-align: center;
+    margin: 0px auto;
+    padding: 10px;
+    color: var(--color__blanco);
+    
+   
+}
+.redaccion_titulo{
+    color: black;
+    font-size: 1.5em;
+    padding-bottom: 10px;
+}
+.redaccion_parrafo{
+    text-align: justify;
+    word-spacing: 0.4em;
+}
+    
+ /*------------------- PRODUCTOS FRESCOS ------------------------------*/  
+ 
+ .productos_frescos{
+    background:linear-gradient(rgba(10, 10, 10, 0.7),rgba(10, 10, 10, 0.7)), url(../imagenes/seccion_platos_frescos.jpeg);
+    width: 100%;
+    height:400px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-origin: border-box;
+    
+ }
+ .productos_frescos_texto_contenedor{
+    width: 85%;
+    margin: 0px auto;
+    padding-top: 70px;
+    
+ }
+ 
+ .titulo_productos_frescos{
+    text-align: center;
+    color: var(--color__secundario);
+    font-size: 1.5em;
+    margin-bottom: 20px;
+ }
+ .texto_productos_frescos {
+    color: var(--color__blanco);
+    text-align: center;
+    margin-top: 50px;
+ } 
+ /*------------------- FOOTER ------------------------------*/  
+footer{
+    text-align: center;
+    width: 100%;
+    height: 70px;
+    background-color: black;
+}
+.footer_redes_sociales i {
+    color:var(--color__secundario);
+    font-size: 1.5em;
+    padding-top: 10px;
+    margin-right: 10px;
+}
+.footer_redes_sociales p{
+    color: var(--coor__secundario-2);
+    
+}
+
 
